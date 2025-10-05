@@ -22,5 +22,5 @@ jobs:
           path: ~/.cache/myapp
           key: cache-eef71f2
 
-      - name: Check cache result
+      - name: Echo cache hit/miss
         run: echo "Cache hit result: ${{ steps.cache-step.outputs.cache-hit }}"
