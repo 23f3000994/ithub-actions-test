@@ -7,9 +7,13 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+
+      - name: Create cache folder
+        run: mkdir -p ~/.cache/myapp
 
       - name: prime-cache-eef71f2
         id: cache-step
