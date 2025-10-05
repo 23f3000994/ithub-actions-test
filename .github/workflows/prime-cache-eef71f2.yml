@@ -16,11 +16,11 @@ jobs:
         run: mkdir -p ~/.cache/myapp
 
       - name: prime-cache-eef71f2
-        id: cache-step
+        id: prime-cache-eef71f2
         uses: actions/cache@v4
         with:
           path: ~/.cache/myapp
           key: cache-eef71f2
 
       - name: Echo cache hit/miss
-        run: echo "Cache hit result: ${{ steps.cache-step.outputs.cache-hit }}"
+        run: echo "Cache hit result: ${{ steps.prime-cache-eef71f2.outputs.cache-hit }}"
